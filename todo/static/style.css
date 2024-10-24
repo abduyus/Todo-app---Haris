@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #171717;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    font-size: 3.6rem
+}
+
+.todo-div {
+    margin: 2.4rem auto;
+    padding: 2.4rem;
+    width: 50%;
+    background-color: #262626;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    row-gap: 2rem;
+    align-items: center;
+}
+.todo-item {
+    list-style: none;
+
+    padding: 1.2rem;
+    margin: 1.2rem 0;
+    background-color: #525252;
+    color: #fff;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+.item-checkbox {
+    margin-right: 1rem
+}
+.item-title {
+    font-size: 2.4rem;
+    font-weight: 550;
+}
+
+.item-desc {
+    font-size: 1.8rem;
+}
+
+.item-date {
+    font-size: 1.4rem;
+    color: #737373;
+    font-weight: 600;
+}

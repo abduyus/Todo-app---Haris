@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1 class="title">ToDo list item</h1>
+    <div class="todo-div">
+        <ul class="todo-list">
+            {% for task in tasks %}
+            <li class="todo-item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="grid">
+
+                <span class="item-title">{{ task.title }}</span>
+                <span class="item-date">Created {{ task.created }}</span>
+                <span class="item-desc">{{ task.description }}</span>
+                </div>
+
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
