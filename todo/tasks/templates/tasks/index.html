@@ -15,7 +15,7 @@
     <div class="todo-div">
         <ul class="todo-list">
             {% for task in tasks %}
-            <li class="todo-item">
+            <li class="todo-item" data-id="{{ task.id }}">
                 <input type="checkbox" class="item-checkbox">
                 <div class="grid">
                 <span class="item-title">{{ task.title }}</span>
@@ -29,6 +29,19 @@
             {% endfor %}
         </ul>
         <a href="#" class="btn btn-add-new">Add Task</a>
+    </div>
+    <div class="overlay hidden">
+
+    <form name="add-form" class="form-add hidden">
+        <label for="title">Add Task</label>
+        <input type="text" name="title" placeholder="Title" required>
+        <label for="description">Description</label>
+        <textarea name="description" placeholder="Description" required></textarea>
+        <label for="due">Due Date</label>
+        <input type="date" name="due" required>
+
+        <button type="submit" class="btn btn-sub">Add Task</button>
+    </form>
     </div>
 </body>
 </html>

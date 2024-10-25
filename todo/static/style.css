@@ -116,3 +116,64 @@ body {
 .btn.btn-add-new:hover {
     background-color: #c026d3;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    z-index: 999; /* Ensure it is below the form but above other elements */
+}
+
+.form-add {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.6rem;
+    background-color: #0891b2;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it is above other elements */
+    padding: 2rem;
+}
+
+.form-add label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.form-add input,
+.form-add select,
+.form-add textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    color: inherit;
+    background-color: #d2e5f7;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-sub {
+    background-color: #155e75;
+}
+
+.btn-sub:hover {
+    background-color: #0d3e4f;
+}
+
+.hidden {
+    display: none;
+}
