@@ -17,7 +17,9 @@ const getCookie = (name) => {
 
 const csrftoken = getCookie('csrftoken');
 
-document.querySelector('.todo-list').addEventListener('click', async function (e) {
+const todoList = document.querySelector('.todo-list')
+
+todoList.addEventListener('click', async function (e) {
     if (e.target.classList.contains('item-delete')) {
         const liEl = e.target.closest('li');
         const taskId = liEl.getAttribute('data-id');
