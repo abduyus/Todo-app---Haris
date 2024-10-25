@@ -25,15 +25,20 @@ body {
     border-radius: 0.4rem;
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
 }
+
 .grid {
     display: grid;
-    grid-template-columns: 1fr 0.5fr;
+    grid-template-columns: 1fr;
     row-gap: 2rem;
     align-items: center;
-}
-.todo-item {
-    list-style: none;
 
+}
+
+.todo-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    list-style: none;
     padding: 1.2rem;
     margin: 1.2rem 0;
     background-color: #525252;
@@ -41,9 +46,20 @@ body {
     border-radius: 0.4rem;
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
 }
+
 .item-checkbox {
-    margin-right: 1rem
+    width: 1.6rem;
+    height: 1.6rem;
+    accent-color: #ff4d4d; /* Change the color of the checkbox */
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 1rem;
 }
+
+.item-checkbox:hover {
+    transform: scale(1.1); /* Slightly enlarge the checkbox on hover */
+}
+
 .item-title {
     font-size: 2.4rem;
     font-weight: 550;
@@ -54,7 +70,49 @@ body {
 }
 
 .item-date {
+    justify-self: end;
     font-size: 1.4rem;
     color: #737373;
     font-weight: 600;
+}
+
+.item-delete {
+    justify-self: end;
+    margin-left: 1rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.5s;
+}
+
+.item-delete:hover {
+    color: #ff4d4d;
+}
+
+.btn:link,
+.btn:visited,
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    text-decoration: none;
+
+    transition: all 0.5s;
+
+
+    border: none;
+    cursor: pointer;
+}
+
+.btn.btn-add-new {
+    background-color: #22d3ee;
+    color: #fff;
+}
+
+.btn.btn-add-new:hover {
+    background-color: #c026d3;
 }
